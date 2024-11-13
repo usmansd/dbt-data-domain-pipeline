@@ -1,3 +1,4 @@
+# For Usman Solutoin and imporvement recommendation for this project please read file "README_USMAN_SOLUTION.md"
 # README
 
 This is sample dbt repo for interview purpose
