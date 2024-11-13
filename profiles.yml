@@ -1,0 +1,30 @@
+dap:
+  target: dev-uk
+  
+  outputs:
+    dev-uk:
+      type: bigquery
+      method: service-account-json
+      project: my-dev-239410
+      threads: 8
+      service_account: my-sa
+      secret_key: my-sa-secret
+      key_file: my-sa.json
+
+    preprod-ca:
+      type: bigquery
+      method: service-account-json
+      project: my-preprod-project
+      threads: 8
+      service_account: my-sa
+      secret_key: my-sa-secret
+      key_file: my-sa.json
+
+    prod-ca:
+      type: bigquery
+      method: service-account-json
+      project: my-prod-project
+      threads: 8
+      service_account: my-sa
+      secret_key: my-sa-secret
+      key_file: my-sa.json
