@@ -1,0 +1,52 @@
+# Any source tables used in schema should be referenced here
+
+version: 2
+
+sources:
+  - name: my_domain_workflow
+    description: 'Events from Coreruby Native or Microservice or External sources'
+    schema: 'my_domain_workflow'
+    tables:
+      - name: 'process'
+      - name: 'variable'
+      - name: 'user_operation'
+      - name: 'task'
+      - name: 'job'
+      - name: 'form_property'
+
+  - name: my_domain_appointment
+    description: 'Events from Coreruby Native or Microservice or External sources'
+    schema: 'my_domain_appointment'
+    tables:
+      - name: 'appointment'
+      - name: 'availability_slots'
+      - name: 'consultation'
+      - name: 'consultation_notes'
+      - name: 'patient'
+      - name: 'stg_appointment_slots'
+      
+
+  - name: coreruby
+    description: 'Events from Coreruby Native'
+    schema: 'my_operational'
+    tables:
+      - name: 'transactions'
+        identifier: "coreruby_transactions_native"
+      - name: 'credit_cards'
+        identifier: "coreruby_credit_cards_native"
+      - name: 'appointments'
+        identifier: "coreruby_appointments_native"
+      - name: 'consumer_networks'
+        identifier: "coreruby_consumer_networks_native"
+      - name: 'transaction_details'
+        identifier: "coreruby_transaction_details_native"
+      - name: 'consultants'
+        identifier: "coreruby_consultants_native"
+      - name: 'consultants_regions'
+        identifier: "coreruby_consultants_regions_native"
+      - name: 'specialisms'
+        identifier: "coreruby_specialisms_native"
+      - name: 'specialism_categories'
+        identifier: "coreruby_specialism_categories_native"
+      - name: 'appointment_service_types'
+        identifier: "coreruby_appointment_service_types_native"
