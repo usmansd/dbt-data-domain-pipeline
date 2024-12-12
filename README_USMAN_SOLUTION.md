@@ -3,8 +3,7 @@
 ## Problem with the current implementation
 
 - Need to run through a loop to get the individual model running
-- Structure of the source.yml is incorrect and because of that the shell script is required.
-- Parent directory is missing or renamed in this repo, so location of both projects and profile yaml file is incorrect in the dbt commands running.
+- shell script is required making it more complicated
 - Both Dev abd Prod environment are diverging, DEV should almost always be a close replica of what prod looks like atleast in structure.
 - Purpose of manifest.yml file is unclear.
 - Current state of solution doesn't utilise any parallel processing, where we can declare threads and run multiple models at the same time.
@@ -27,11 +26,9 @@ dbt run --profiles-dir . --project-dir . --target dev-uk # for dev local run
 dbt run --profiles-dir . --project-dir . --target preprod-ca # for preprod local run
 dbt run --profiles-dir . --project-dir . --target prod-ca # for prod local run
 ```
-
-Quick note - Since all the projects are using the same Service account, you will need to change the service account in the profiles.yml file or provide access to service account to
+Since all the projects are using the same Service account, we will need to change the service account in the profiles.yml file or provide access to service account to
 all three environments
 
-**NOTE**: I have only implemented the simple solution
 
 ## Complicated Solution
 
